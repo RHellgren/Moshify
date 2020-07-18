@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="247" id="Cry-2b-z9M" customClass="ReleasesTableViewCell" customModule="Moshi_case" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cry-2b-z9M" id="uSm-cy-uQ6">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVZ-9J-U2p">
+                        <rect key="frame" x="20" y="180.5" width="374" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-Xo-YjJ">
+                        <rect key="frame" x="20" y="206" width="374" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L9U-Xo-YjJ" firstAttribute="leading" secondItem="uSm-cy-uQ6" secondAttribute="leading" constant="20" id="H07-Cm-e0Z"/>
+                    <constraint firstAttribute="trailing" secondItem="BVZ-9J-U2p" secondAttribute="trailing" constant="20" id="bIE-Ki-y0s"/>
+                    <constraint firstAttribute="trailing" secondItem="L9U-Xo-YjJ" secondAttribute="trailing" constant="20" id="bX4-K7-3k9"/>
+                    <constraint firstItem="L9U-Xo-YjJ" firstAttribute="top" secondItem="BVZ-9J-U2p" secondAttribute="bottom" constant="5" id="gVc-0A-b5a"/>
+                    <constraint firstItem="BVZ-9J-U2p" firstAttribute="leading" secondItem="uSm-cy-uQ6" secondAttribute="leading" constant="20" id="gXT-UX-1hG"/>
+                    <constraint firstAttribute="bottom" secondItem="L9U-Xo-YjJ" secondAttribute="bottom" constant="20" id="luI-XT-TUO"/>
+                    <constraint firstItem="BVZ-9J-U2p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uSm-cy-uQ6" secondAttribute="topMargin" constant="50" id="ohC-Yh-5XH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="releaseDateLabel" destination="L9U-Xo-YjJ" id="7RA-uO-hRV"/>
+                <outlet property="titleLabel" destination="BVZ-9J-U2p" id="X1w-E9-RLb"/>
+            </connections>
+            <point key="canvasLocation" x="13.043478260869566" y="-28.459821428571427"/>
+        </tableViewCell>
+    </objects>
+</document>
