@@ -11,4 +11,5 @@ import Foundation
 struct ReleasesTableViewCellViewModel {
     var albumTitle: String
     var albumReleaseDate: String
+    var albumCoverArtURL: URL?
 }

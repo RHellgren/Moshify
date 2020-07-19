@@ -27,6 +27,8 @@ class ReleasesTableViewControllerViewModel {
 
         let album = albums[index]
 
-        return ReleasesTableViewCellViewModel(albumTitle: album.name, albumReleaseDate: album.releaseDate)
+        return ReleasesTableViewCellViewModel(albumTitle: album.name,
+                                              albumReleaseDate: album.releaseDate,
+                                              albumCoverArtURL: album.coverArtURL)
     }
 }

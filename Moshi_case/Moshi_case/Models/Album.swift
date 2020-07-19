@@ -11,4 +11,5 @@ import Foundation
 struct Album {
     let name: String
     let releaseDate: String
+    let coverArtURL: URL?
 }

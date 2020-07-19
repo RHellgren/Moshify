@@ -20,7 +20,9 @@ class DataService {
             }
 
             let albums = apiNewReleases.albums.items.map {
-                Album(name: $0.name, releaseDate: $0.releaseDate)
+                Album(name: $0.name,
+                      releaseDate: $0.releaseDate,
+                      coverArtURL: $0.images.first?.url)
             }
             completion(NewReleases(albums: albums))
         }

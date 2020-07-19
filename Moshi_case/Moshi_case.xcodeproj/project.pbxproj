@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,7 @@
 		B15E6DB324C3BF0C00C20CFD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6DB224C3BF0C00C20CFD /* Album.swift */; };
 		B15E6DB524C3BF4E00C20CFD /* NewReleases.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6DB424C3BF4E00C20CFD /* NewReleases.swift */; };
 		B15E6DB824C3BFE300C20CFD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6DB724C3BFE300C20CFD /* DataService.swift */; };
+		B15E6DBC24C4383000C20CFD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B15E6DBB24C4383000C20CFD /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15E6DBC24C4383000C20CFD /* Kingfisher in Frameworks */,
 				B15E6DA424C3BEB400C20CFD /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +237,9 @@
 				B15E6DA324C3BEB400C20CFD /* PBXTargetDependency */,
 			);
 			name = Moshi_case;
+			packageProductDependencies = (
+				B15E6DBB24C4383000C20CFD /* Kingfisher */,
+			);
 			productName = Moshi_case;
 			productReference = B15E6D6524C301C800C20CFD /* Moshi_case.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +289,9 @@
 				Base,
 			);
 			mainGroup = B15E6D5C24C301C800C20CFD;
+			packageReferences = (
+				B15E6DBA24C4383000C20CFD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = B15E6D6624C301C800C20CFD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -426,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -480,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -621,6 +629,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B15E6DBA24C4383000C20CFD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B15E6DBB24C4383000C20CFD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B15E6DBA24C4383000C20CFD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B15E6D5D24C301C800C20CFD /* Project object */;
 }

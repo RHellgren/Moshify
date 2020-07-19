@@ -9,22 +9,22 @@
 import Foundation
 
 public struct ExternalURL: Codable {
-    let spotify: URL
+    public let spotify: URL
 }
 
 public struct Image: Codable {
-    let height: Int
-    let url: URL
-    let width: Int
+    public let height: Int
+    public let url: URL
+    public let width: Int
 }
 
 public struct Artist: Codable {
-    let externalURLs: ExternalURL
-    let href: URL
-    let id: String
-    let name: String
-    let type: String
-    let uri: String
+    public let externalURLs: ExternalURL
+    public let href: URL
+    public let id: String
+    public let name: String
+    public let type: String
+    public let uri: String
 
     enum CodingKeys: String, CodingKey {
         case externalURLs = "external_urls"
@@ -37,12 +37,12 @@ public struct Artist: Codable {
 }
 
 public struct Copyright: Codable {
-    let text: String
-    let type: String
+    public let text: String
+    public let type: String
 }
 
 public struct ExternalIds: Codable {
-    let upc: String
+    public let upc: String
 }
 
 public struct Genre: Codable {
