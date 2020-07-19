@@ -11,6 +11,7 @@ import UIKit
 class ReleasesTableViewController: UITableViewController {
 
     var viewModel = ReleasesTableViewControllerViewModel()
+    private var isLoading = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +19,11 @@ class ReleasesTableViewController: UITableViewController {
         tableView.register(ReleasesTableViewCell.self)
         tableView.delegate = self
 
-        viewModel.load() {
-            self.tableView.reloadData()
-        }
-
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
+
+        viewModel.delegate = self
+        viewModel.fetchNewReleases()
     }
 
     // MARK: - UITableViewDataSource
@@ -47,6 +47,8 @@ class ReleasesTableViewController: UITableViewController {
         return cell
     }
 
+    // MARK: - UITableViewDataDelegate
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel.albumDetailViewModel(for: indexPath.row) else {
             return
@@ -56,6 +58,31 @@ class ReleasesTableViewController: UITableViewController {
         viewController.configure(with: viewModel)
 
         present(viewController, animated: true)
+    }
+
+    // MARK: - UITableView infinite scroll
+
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+
+        if (offsetY > contentHeight - scrollView.frame.height) && !isLoading {
+            loadMoreData()
+        }
+    }
+
+    func loadMoreData() {
+        if !self.isLoading {
+            self.isLoading = true
+            viewModel.fetchNewReleases()
+        }
+    }
+}
+
+extension ReleasesTableViewController: ReleasesTableViewControllerViewModelDelegate {
+    func onFetchCompleted() {
+        tableView.reloadData()
+        isLoading = false
     }
 }
 

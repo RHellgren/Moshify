@@ -12,8 +12,8 @@ import Spotify
 class DataService {
     private let api = Spotify.SpotifyAPI()
 
-    func getNewReleases(completion: @escaping (NewReleases?) -> Void) {
-        api.getNewReleases { apiNewReleases in
+    func getNewReleases(page: Int, completion: @escaping (NewReleases?) -> Void) {
+        api.getNewReleases(page: page) { apiNewReleases in
             guard let apiNewReleases = apiNewReleases else {
                 completion(nil)
                 return

@@ -10,17 +10,19 @@ import Foundation
 
 extension SpotifyAPI {
 
-    public func getNewReleases(completion: @escaping (NewReleases?) -> Void) {
+    public func getNewReleases(page: Int, completion: @escaping (NewReleases?) -> Void) {
         var components = URLComponents()
         components.scheme = SpotifyAPIConfig.scheme
         components.host = SpotifyAPIConfig.url
         components.path = "/v1/browse/new-releases"
 
-        if let regionCode = Locale.current.regionCode {
-            components.queryItems = [
-                URLQueryItem(name: "country", value: regionCode)
-            ]
-        }
+        let limit = 10
+
+        components.queryItems = [
+            URLQueryItem(name: "country", value: "GB"),
+            URLQueryItem(name: "limit", value: "\(limit)"),
+            URLQueryItem(name: "offset", value: "\(page * limit)")
+        ]
 
         guard let url = components.url else {
             completion(nil)
@@ -45,11 +47,9 @@ extension SpotifyAPI {
         components.host = SpotifyAPIConfig.url
         components.path = "/v1/albums/\(id)"
 
-        if let regionCode = Locale.current.regionCode {
-            components.queryItems = [
-                URLQueryItem(name: "market", value: regionCode)
-            ]
-        }
+        components.queryItems = [
+            URLQueryItem(name: "market", value: "GB")
+        ]
 
         guard let url = components.url else {
             completion(nil)

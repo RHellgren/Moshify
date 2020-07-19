@@ -8,15 +8,36 @@
 
 import Foundation
 
+protocol ReleasesTableViewControllerViewModelDelegate {
+    func onFetchCompleted()
+}
+
 class ReleasesTableViewControllerViewModel {
     var albums: [Album] = []
+    var delegate: ReleasesTableViewControllerViewModelDelegate?
+    private var isFetchInProgress = false
+    private var currentPage = 0
 
-    func load(completion: @escaping () -> Void) {
-        DataService().getNewReleases { newReleases in
+    func fetchNewReleases() {
+        guard albums.count < 100 else {
+            return
+        }
+
+        guard !isFetchInProgress else {
+          return
+        }
+
+        isFetchInProgress = true
+
+        DataService().getNewReleases(page: currentPage) { newReleases in
+            self.isFetchInProgress = false
+
             if let albums = newReleases?.albums {
-                self.albums = albums
+                self.currentPage += 1
+                self.albums.append(contentsOf: albums)
             }
-            completion()
+            
+            self.delegate?.onFetchCompleted()
         }
     }
 
