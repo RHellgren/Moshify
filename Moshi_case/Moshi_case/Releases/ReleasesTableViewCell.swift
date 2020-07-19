@@ -9,10 +9,28 @@
 import UIKit
 import Kingfisher
 
+protocol ReleasesTableViewCellDelegate {
+    func tableViewCell(_ tableViewCell: UITableViewCell, shareButtonPressedFor url: URL)
+}
+
 class ReleasesTableViewCell: UITableViewCell {
     @IBOutlet private var coverArtImageView: UIImageView!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var releaseDateLabel: UILabel!
+    @IBOutlet private var shareButton: UIButton!
+
+    var delegate: ReleasesTableViewCellDelegate?
+    private var shareURL: URL?
+
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        shareButton.backgroundColor = .gray
+        shareButton.layer.cornerRadius = 5
+        shareButton.imageView?.tintColor = .white
+        shareButton.imageEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+    }
 
     func configure(viewModel: ReleasesTableViewCellViewModel) {
         titleLabel.text = viewModel.albumTitle
@@ -28,5 +46,13 @@ class ReleasesTableViewCell: UITableViewCell {
                     .cacheOriginalImage
                 ])
         }
+        shareURL = viewModel.sharingURL
+    }
+
+    @IBAction func didPressShare(_ sender: Any) {
+        guard let shareURL = shareURL else {
+            return
+        }
+        delegate?.tableViewCell(self, shareButtonPressedFor: shareURL)
     }
 }

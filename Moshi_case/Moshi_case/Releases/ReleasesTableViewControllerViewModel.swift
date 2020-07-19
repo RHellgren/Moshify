@@ -29,6 +29,7 @@ class ReleasesTableViewControllerViewModel {
 
         return ReleasesTableViewCellViewModel(albumTitle: album.name,
                                               albumReleaseDate: album.releaseDate,
-                                              albumCoverArtURL: album.coverArtURL)
+                                              albumCoverArtURL: album.coverArtURL,
+                                              sharingURL: album.sharingURL)
     }
 }

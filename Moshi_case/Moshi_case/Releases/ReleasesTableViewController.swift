@@ -40,9 +40,18 @@ class ReleasesTableViewController: UITableViewController {
 
         if let viewModel = viewModel.viewModel(for: indexPath.row) {
             cell.configure(viewModel: viewModel)
+            cell.delegate = self
         }
 
         return cell
     }
 }
 
+extension ReleasesTableViewController: ReleasesTableViewCellDelegate {
+    func tableViewCell(_ tableViewCell: UITableViewCell, shareButtonPressedFor url: URL) {
+        let activityController = UIActivityViewController(
+            activityItems: [url],
+            applicationActivities: nil)
+        present(activityController, animated: true)
+    }
+}

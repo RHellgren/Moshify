@@ -22,7 +22,8 @@ class DataService {
             let albums = apiNewReleases.albums.items.map {
                 Album(name: $0.name,
                       releaseDate: $0.releaseDate,
-                      coverArtURL: $0.images.first?.url)
+                      coverArtURL: $0.images.first?.url,
+                      sharingURL: $0.externalURLs.spotify)
             }
             completion(NewReleases(albums: albums))
         }

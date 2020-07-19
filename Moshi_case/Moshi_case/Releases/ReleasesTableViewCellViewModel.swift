@@ -12,4 +12,5 @@ struct ReleasesTableViewCellViewModel {
     var albumTitle: String
     var albumReleaseDate: String
     var albumCoverArtURL: URL?
+    var sharingURL: URL
 }
