@@ -40,7 +40,7 @@ class ReleasesTableViewCell: UITableViewCell {
             coverArtImageView.kf.indicatorType = .activity
             coverArtImageView.kf.setImage(
                 with: url,
-                placeholder: UIImage(named: "placeholderImage"),
+                placeholder: UIImage(named: "CoverArtPlaceholder"),
                 options: [
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.fade(1)),
