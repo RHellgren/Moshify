@@ -9,16 +9,14 @@
 import Foundation
 
 class ReleasesTableViewControllerViewModel {
-    var albums: [NewReleases.Albums.AlbumItem] = []
+    var albums: [Album] = []
 
     func reload(completion: @escaping () -> Void) {
-        SpotifyAPI().getNewReleases { newReleases in
-            if let newReleases = newReleases {
-                self.albums = newReleases.albums.items
-                completion()
-            } else {
-                print("unable to fetch albums")
+        DataService().getNewReleases { newReleases in
+            if let albums = newReleases?.albums {
+                self.albums = albums
             }
+            completion()
         }
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Album: Codable {
+public struct Album: Codable {
     let albumType: String
     let artists: [Artist]
     let availableMarkets: [String]

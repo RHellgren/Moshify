@@ -8,32 +8,32 @@
 
 import Foundation
 
-struct NewReleases: Codable {
-    let albums: Albums
+public struct NewReleases: Codable {
+    public let albums: Albums
 
-    struct Albums: Codable {
-        let href: URL
-        let items: [AlbumItem]
-        let limit: Int
-        let next: String?
-        let offset: Int
-        let previous: String?
-        let total: Int
+    public struct Albums: Codable {
+        public let href: URL
+        public let items: [AlbumItem]
+        public let limit: Int
+        public let next: String?
+        public let offset: Int
+        public let previous: String?
+        public let total: Int
 
-        struct AlbumItem: Codable {
-            let albumType: String
-            let artists: [Artist]
-            let availableMarkets: [String]
-            let externalURLs: ExternalURL
-            let href: URL
-            let id: String
-            let images: [Image]
-            let name: String
-            let releaseDate: String
-            let releaseDatePrecision: String
-            let totalTracks: Int
-            let type: String
-            let uri: String
+        public struct AlbumItem: Codable {
+            public let albumType: String
+            public let artists: [Artist]
+            public let availableMarkets: [String]
+            public let externalURLs: ExternalURL
+            public let href: URL
+            public let id: String
+            public let images: [Image]
+            public let name: String
+            public let releaseDate: String
+            public let releaseDatePrecision: String
+            public let totalTracks: Int
+            public let type: String
+            public let uri: String
 
             enum CodingKeys: String, CodingKey {
                 case albumType = "album_type"

@@ -10,7 +10,7 @@ import Foundation
 
 extension SpotifyAPI {
 
-    func getNewReleases(completion: @escaping (NewReleases?) -> Void) {
+    public func getNewReleases(completion: @escaping (NewReleases?) -> Void) {
         var components = URLComponents()
         components.scheme = SpotifyAPIConfig.scheme
         components.host = SpotifyAPIConfig.url
@@ -39,7 +39,7 @@ extension SpotifyAPI {
         }
     }
 
-    func getAlbum(id: String, completion: @escaping (Album?) -> Void) {
+    public func getAlbum(id: String, completion: @escaping (Album?) -> Void) {
         var components = URLComponents()
         components.scheme = SpotifyAPIConfig.scheme
         components.host = SpotifyAPIConfig.url

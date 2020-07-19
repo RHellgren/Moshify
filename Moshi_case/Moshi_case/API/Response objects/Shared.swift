@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct ExternalURL: Codable {
+public struct ExternalURL: Codable {
     let spotify: URL
 }
 
-struct Image: Codable {
+public struct Image: Codable {
     let height: Int
     let url: URL
     let width: Int
 }
 
-struct Artist: Codable {
+public struct Artist: Codable {
     let externalURLs: ExternalURL
     let href: URL
     let id: String
@@ -36,14 +36,14 @@ struct Artist: Codable {
     }
 }
 
-struct Copyright: Codable {
+public struct Copyright: Codable {
     let text: String
     let type: String
 }
 
-struct ExternalIds: Codable {
+public struct ExternalIds: Codable {
     let upc: String
 }
 
-struct Genre: Codable {
+public struct Genre: Codable {
 }

@@ -22,7 +22,10 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
-class SpotifyAPI {
+public class SpotifyAPI {
+    
+    public init() { }
+
     internal func request<T: Codable>(url: URL, method: HTTPMethod, completion: @escaping (Result<T, APIError>) -> ()) {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
