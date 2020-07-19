@@ -9,8 +9,8 @@
 import Foundation
 
 struct ReleasesTableViewCellViewModel {
-    var albumTitle: String
-    var albumReleaseDate: String
-    var albumCoverArtURL: URL?
-    var sharingURL: URL
+    let albumTitle: String
+    let albumReleaseDate: String
+    let albumCoverArtURL: URL?
+    let sharingURL: URL
 }

@@ -16,8 +16,9 @@ class ReleasesTableViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.register(ReleasesTableViewCell.self)
+        tableView.delegate = self
 
-        viewModel.reload() {
+        viewModel.load() {
             self.tableView.reloadData()
         }
 
@@ -25,7 +26,7 @@ class ReleasesTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 600
     }
 
-    // MARK: - UITablenViewDataSource
+    // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -38,12 +39,23 @@ class ReleasesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ReleasesTableViewCell = tableView.dequeueReusableCell(for: indexPath)
 
-        if let viewModel = viewModel.viewModel(for: indexPath.row) {
+        if let viewModel = viewModel.cellViewModel(for: indexPath.row) {
             cell.configure(viewModel: viewModel)
             cell.delegate = self
         }
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel.albumDetailViewModel(for: indexPath.row) else {
+            return
+        }
+
+        let viewController: AlbumDetailViewController = AlbumDetailViewController.instantiate()
+        viewController.configure(with: viewModel)
+
+        present(viewController, animated: true)
     }
 }
 

@@ -22,7 +22,6 @@ class ReleasesTableViewCell: UITableViewCell {
     var delegate: ReleasesTableViewCellDelegate?
     private var shareURL: URL?
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -35,6 +34,8 @@ class ReleasesTableViewCell: UITableViewCell {
     func configure(viewModel: ReleasesTableViewCellViewModel) {
         titleLabel.text = viewModel.albumTitle
         releaseDateLabel.text = viewModel.albumReleaseDate
+        shareURL = viewModel.sharingURL
+        
         if let url = viewModel.albumCoverArtURL {
             coverArtImageView.kf.indicatorType = .activity
             coverArtImageView.kf.setImage(
@@ -46,7 +47,6 @@ class ReleasesTableViewCell: UITableViewCell {
                     .cacheOriginalImage
                 ])
         }
-        shareURL = viewModel.sharingURL
     }
 
     @IBAction func didPressShare(_ sender: Any) {

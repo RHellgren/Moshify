@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5m-vr-SCg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album Detail View Controller-->
+        <scene sceneID="bWU-w5-Hd3">
+            <objects>
+                <viewController id="M5m-vr-SCg" customClass="AlbumDetailViewController" customModule="Moshi_case" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5y2-fS-PYl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fR7-aD-v5O">
+                                <rect key="frame" x="57" y="144" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fR7-aD-v5O" secondAttribute="height" multiplier="1:1" id="QIL-sy-cOy"/>
+                                    <constraint firstAttribute="width" constant="300" id="mzy-AN-1Uw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album - Artist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZY-kO-inV">
+                                <rect key="frame" x="20" y="474" width="374" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTt-II-v8l">
+                                <rect key="frame" x="20" y="525" width="374" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFx-xQ-srY">
+                                <rect key="frame" x="20" y="548" width="374" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhV-yC-KAb">
+                                <rect key="frame" x="355" y="64" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="didPressClose:" destination="M5m-vr-SCg" eventType="touchUpInside" id="bFi-V4-PeS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FhV-yC-KAb" firstAttribute="top" secondItem="XIB-zw-8BZ" secondAttribute="top" constant="20" id="B8i-88-mjy"/>
+                            <constraint firstItem="uZY-kO-inV" firstAttribute="leading" secondItem="XIB-zw-8BZ" secondAttribute="leading" constant="20" id="BKu-8b-95I"/>
+                            <constraint firstItem="nFx-xQ-srY" firstAttribute="top" secondItem="HTt-II-v8l" secondAttribute="bottom" constant="5" id="LMy-xo-jQG"/>
+                            <constraint firstItem="XIB-zw-8BZ" firstAttribute="trailing" secondItem="uZY-kO-inV" secondAttribute="trailing" constant="20" id="MKf-T2-QJD"/>
+                            <constraint firstItem="uZY-kO-inV" firstAttribute="top" secondItem="fR7-aD-v5O" secondAttribute="bottom" constant="30" id="Nj3-Wn-HHE"/>
+                            <constraint firstItem="nFx-xQ-srY" firstAttribute="leading" secondItem="HTt-II-v8l" secondAttribute="leading" id="cjL-cp-zsU"/>
+                            <constraint firstItem="HTt-II-v8l" firstAttribute="trailing" secondItem="uZY-kO-inV" secondAttribute="trailing" id="g7v-c3-3uJ"/>
+                            <constraint firstItem="fR7-aD-v5O" firstAttribute="top" secondItem="XIB-zw-8BZ" secondAttribute="top" constant="100" id="hMI-jE-4bZ"/>
+                            <constraint firstItem="HTt-II-v8l" firstAttribute="top" secondItem="uZY-kO-inV" secondAttribute="bottom" constant="10" id="l2s-zr-BUb"/>
+                            <constraint firstItem="nFx-xQ-srY" firstAttribute="trailing" secondItem="HTt-II-v8l" secondAttribute="trailing" id="nfu-QV-t1b"/>
+                            <constraint firstItem="XIB-zw-8BZ" firstAttribute="trailing" secondItem="FhV-yC-KAb" secondAttribute="trailing" constant="20" id="tjC-8l-Ysc"/>
+                            <constraint firstItem="HTt-II-v8l" firstAttribute="leading" secondItem="uZY-kO-inV" secondAttribute="leading" id="uHr-Kd-Azy"/>
+                            <constraint firstItem="fR7-aD-v5O" firstAttribute="centerX" secondItem="5y2-fS-PYl" secondAttribute="centerX" id="usx-wT-sBf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XIB-zw-8BZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumArtistLabel" destination="uZY-kO-inV" id="PFQ-3T-A3f"/>
+                        <outlet property="closeButton" destination="FhV-yC-KAb" id="V97-M8-v4r"/>
+                        <outlet property="coverArtImageView" destination="fR7-aD-v5O" id="Vlu-hD-wqs"/>
+                        <outlet property="recordLabelLabel" destination="HTt-II-v8l" id="QBd-PG-Opg"/>
+                        <outlet property="trackCountLabel" destination="nFx-xQ-srY" id="Hnb-IM-Rx2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scx-vt-TNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="65"/>
+        </scene>
+    </scenes>
+</document>

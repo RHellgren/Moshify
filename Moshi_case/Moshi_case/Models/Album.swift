@@ -9,8 +9,19 @@
 import Foundation
 
 struct Album {
+    let id: String
     let name: String
+    let artist: [Artist]
     let releaseDate: String
     let coverArtURL: URL?
     let sharingURL: URL
+}
+
+struct DetailedAlbum {
+    let coverArtURL: URL?
+    let artist: [Artist]
+    let title: String
+    let releaseDate: String
+    let recordLabelName: String
+    let tracks: [Track]
 }

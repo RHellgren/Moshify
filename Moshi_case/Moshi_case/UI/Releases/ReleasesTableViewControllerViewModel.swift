@@ -11,7 +11,7 @@ import Foundation
 class ReleasesTableViewControllerViewModel {
     var albums: [Album] = []
 
-    func reload(completion: @escaping () -> Void) {
+    func load(completion: @escaping () -> Void) {
         DataService().getNewReleases { newReleases in
             if let albums = newReleases?.albums {
                 self.albums = albums
@@ -20,7 +20,7 @@ class ReleasesTableViewControllerViewModel {
         }
     }
 
-    func viewModel(for index: Int) -> ReleasesTableViewCellViewModel? {
+    func cellViewModel(for index: Int) -> ReleasesTableViewCellViewModel? {
         guard albums.indices.contains(index) else {
             return nil
         }
@@ -31,5 +31,15 @@ class ReleasesTableViewControllerViewModel {
                                               albumReleaseDate: album.releaseDate,
                                               albumCoverArtURL: album.coverArtURL,
                                               sharingURL: album.sharingURL)
+    }
+
+    func albumDetailViewModel(for index: Int) -> AlbumDetailViewModel? {
+        guard albums.indices.contains(index) else {
+            return nil
+        }
+
+        let album = albums[index]
+
+        return AlbumDetailViewModel(album: album)
     }
 }
