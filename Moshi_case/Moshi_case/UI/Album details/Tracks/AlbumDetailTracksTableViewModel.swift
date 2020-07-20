@@ -1,5 +1,5 @@
 //
-//  AlbumDetailTracksViewModel.swift
+//  AlbumDetailTracksTableViewModel.swift
 //  Moshi_case
 //
 //  Created by Robin Hellgren on 20/07/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AlbumDetailTracksViewModel {
+class AlbumDetailTracksTableViewModel {
     let tracks: [Track]
 
     init(tracks: [Track]) {

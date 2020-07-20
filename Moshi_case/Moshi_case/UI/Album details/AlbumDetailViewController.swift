@@ -30,7 +30,7 @@ class AlbumDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tracksTableView = segue.destination as? AlbumDetailTracksTableViewController {
             self.tracksTableView = tracksTableView
-            tracksTableView.configure(with: viewModel?.albumDetailTracksViewModel())
+            tracksTableView.configure(with: viewModel?.albumDetailTracksTableViewModel())
         }
     }
 
@@ -78,6 +78,6 @@ class AlbumDetailViewController: UIViewController {
 extension AlbumDetailViewController: AlbumDetailViewModelDelegate {
     func onFetchCompleted() {
         updateUI()
-        tracksTableView?.configure(with: viewModel?.albumDetailTracksViewModel())
+        tracksTableView?.configure(with: viewModel?.albumDetailTracksTableViewModel())
     }
 }

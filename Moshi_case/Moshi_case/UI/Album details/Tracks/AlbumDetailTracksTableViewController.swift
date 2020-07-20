@@ -10,7 +10,7 @@ import UIKit
 
 class AlbumDetailTracksTableViewController: UITableViewController {
 
-    private var viewModel: AlbumDetailTracksViewModel?
+    private var viewModel: AlbumDetailTracksTableViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class AlbumDetailTracksTableViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
     }
 
-    func configure(with viewModel: AlbumDetailTracksViewModel?) {
+    func configure(with viewModel: AlbumDetailTracksTableViewModel?) {
         guard let viewModel = viewModel else {
             return
         }

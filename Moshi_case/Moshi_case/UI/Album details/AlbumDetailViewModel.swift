@@ -49,8 +49,8 @@ class AlbumDetailViewModel {
         }
     }
 
-    func albumDetailTracksViewModel() -> AlbumDetailTracksViewModel {
-        return AlbumDetailTracksViewModel(tracks: tracks ?? [])
+    func albumDetailTracksTableViewModel() -> AlbumDetailTracksTableViewModel {
+        return AlbumDetailTracksTableViewModel(tracks: tracks ?? [])
     }
 
 }

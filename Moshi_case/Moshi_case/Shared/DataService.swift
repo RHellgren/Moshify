@@ -32,7 +32,6 @@ class DataService {
     }
 
     func getDetailedAlbum(id: String, completion: @escaping (DetailedAlbum?) -> Void) {
-
         api.getAlbum(id: id) { detailedAlbum in
             guard let detailedAlbum = detailedAlbum else {
                 completion(nil)
@@ -58,6 +57,5 @@ class DataService {
                                       tracks: tracks)
             completion(album)
         }
-
     }
 }

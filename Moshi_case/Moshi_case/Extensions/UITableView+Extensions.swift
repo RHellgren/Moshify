@@ -17,7 +17,6 @@ extension UITableView {
         } else {
             register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
         }
-
     }
 
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
@@ -28,7 +27,6 @@ extension UITableView {
         return cell
     }
 }
-
 
 extension UITableViewCell {
     static var reuseIdentifier: String {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B156A12C24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12B24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift */; };
-		B156A12E24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */; };
+		B156A12E24C5EF1B0082E78F /* AlbumDetailTracksTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12D24C5EF1B0082E78F /* AlbumDetailTracksTableViewModel.swift */; };
 		B156A13124C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */; };
 		B156A13224C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */; };
 		B15E6D6924C301C800C20CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D6824C301C800C20CFD /* AppDelegate.swift */; };
@@ -28,7 +28,7 @@
 		B15E6DAB24C3BED300C20CFD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D8124C31DC600C20CFD /* Album.swift */; };
 		B15E6DAC24C3BED500C20CFD /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D8424C326B000C20CFD /* Shared.swift */; };
 		B15E6DAD24C3BED800C20CFD /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D7C24C3085700C20CFD /* SpotifyAPI.swift */; };
-		B15E6DAE24C3BEDB00C20CFD /* SpotifyAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D8824C329B500C20CFD /* SpotifyAPIConfiguration.swift */; };
+		B15E6DAE24C3BEDB00C20CFD /* SpotifyAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D8824C329B500C20CFD /* SpotifyAPIConfig.swift */; };
 		B15E6DAF24C3BEDF00C20CFD /* SpotifyAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D8624C3272800C20CFD /* SpotifyAPIEndpoints.swift */; };
 		B15E6DB024C3BEE200C20CFD /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D8A24C33CDA00C20CFD /* HTTPStatusCode.swift */; };
 		B15E6DB324C3BF0C00C20CFD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6DB224C3BF0C00C20CFD /* Album.swift */; };
@@ -69,7 +69,7 @@
 
 /* Begin PBXFileReference section */
 		B156A12B24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksTableViewController.swift; sourceTree = "<group>"; };
-		B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksViewModel.swift; sourceTree = "<group>"; };
+		B156A12D24C5EF1B0082E78F /* AlbumDetailTracksTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksTableViewModel.swift; sourceTree = "<group>"; };
 		B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksTableViewCell.swift; sourceTree = "<group>"; };
 		B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumDetailTracksTableViewCell.xib; sourceTree = "<group>"; };
 		B15E6D6524C301C800C20CFD /* Moshify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moshify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +84,7 @@
 		B15E6D8124C31DC600C20CFD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		B15E6D8424C326B000C20CFD /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		B15E6D8624C3272800C20CFD /* SpotifyAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPIEndpoints.swift; sourceTree = "<group>"; };
-		B15E6D8824C329B500C20CFD /* SpotifyAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPIConfiguration.swift; sourceTree = "<group>"; };
+		B15E6D8824C329B500C20CFD /* SpotifyAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPIConfig.swift; sourceTree = "<group>"; };
 		B15E6D8A24C33CDA00C20CFD /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		B15E6D8C24C345B500C20CFD /* ReleasesTableViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesTableViewControllerViewModel.swift; sourceTree = "<group>"; };
 		B15E6D8E24C3488900C20CFD /* ReleasesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				B156A12B24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift */,
-				B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */,
-				B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */,
+				B156A12D24C5EF1B0082E78F /* AlbumDetailTracksTableViewModel.swift */,
 				B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */,
+				B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			children = (
 				B15E6D8324C326A000C20CFD /* Response objects */,
 				B15E6D7C24C3085700C20CFD /* SpotifyAPI.swift */,
-				B15E6D8824C329B500C20CFD /* SpotifyAPIConfiguration.swift */,
+				B15E6D8824C329B500C20CFD /* SpotifyAPIConfig.swift */,
 				B15E6D8624C3272800C20CFD /* SpotifyAPIEndpoints.swift */,
 				B15E6D8A24C33CDA00C20CFD /* HTTPStatusCode.swift */,
 			);
@@ -188,7 +188,6 @@
 				B15E6D7F24C312C200C20CFD /* NewReleases.swift */,
 				B15E6D8124C31DC600C20CFD /* Album.swift */,
 				B15E6D8424C326B000C20CFD /* Shared.swift */,
-				B15E6DC724C468F300C20CFD /* Artist.swift */,
 			);
 			path = "Response objects";
 			sourceTree = "<group>";
@@ -199,9 +198,9 @@
 				B15E6D6E24C301C800C20CFD /* ReleasesTableView.storyboard */,
 				B15E6D6C24C301C800C20CFD /* ReleasesTableViewController.swift */,
 				B15E6D8C24C345B500C20CFD /* ReleasesTableViewControllerViewModel.swift */,
+				B15E6D8F24C3488900C20CFD /* ReleasesTableViewCell.xib */,
 				B15E6D8E24C3488900C20CFD /* ReleasesTableViewCell.swift */,
 				B15E6D9624C34E1100C20CFD /* ReleasesTableViewCellViewModel.swift */,
-				B15E6D8F24C3488900C20CFD /* ReleasesTableViewCell.xib */,
 			);
 			path = Releases;
 			sourceTree = "<group>";
@@ -230,6 +229,7 @@
 				B15E6DB224C3BF0C00C20CFD /* Album.swift */,
 				B15E6DB424C3BF4E00C20CFD /* NewReleases.swift */,
 				B15E6DC524C468B500C20CFD /* Track.swift */,
+				B15E6DC724C468F300C20CFD /* Artist.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 				B156A13124C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift in Sources */,
 				B15E6D9024C3488900C20CFD /* ReleasesTableViewCell.swift in Sources */,
 				B15E6DB524C3BF4E00C20CFD /* NewReleases.swift in Sources */,
-				B156A12E24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift in Sources */,
+				B156A12E24C5EF1B0082E78F /* AlbumDetailTracksTableViewModel.swift in Sources */,
 				B15E6D9524C3497F00C20CFD /* UITableView+Extensions.swift in Sources */,
 				B15E6D8D24C345B500C20CFD /* ReleasesTableViewControllerViewModel.swift in Sources */,
 				B15E6D6924C301C800C20CFD /* AppDelegate.swift in Sources */,
@@ -408,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15E6DAE24C3BEDB00C20CFD /* SpotifyAPIConfiguration.swift in Sources */,
+				B15E6DAE24C3BEDB00C20CFD /* SpotifyAPIConfig.swift in Sources */,
 				B15E6DAC24C3BED500C20CFD /* Shared.swift in Sources */,
 				B15E6DAA24C3BED000C20CFD /* NewReleases.swift in Sources */,
 				B15E6DAB24C3BED300C20CFD /* Album.swift in Sources */,
