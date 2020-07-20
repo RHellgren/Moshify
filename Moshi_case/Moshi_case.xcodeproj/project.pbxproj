@@ -72,7 +72,7 @@
 		B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksViewModel.swift; sourceTree = "<group>"; };
 		B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksTableViewCell.swift; sourceTree = "<group>"; };
 		B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumDetailTracksTableViewCell.xib; sourceTree = "<group>"; };
-		B15E6D6524C301C800C20CFD /* Moshi_case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moshi_case.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15E6D6524C301C800C20CFD /* Moshify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moshify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15E6D6824C301C800C20CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B15E6D6C24C301C800C20CFD /* ReleasesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesTableViewController.swift; sourceTree = "<group>"; };
 		B15E6D6F24C301C800C20CFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReleasesTableView.storyboard; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		B15E6D6624C301C800C20CFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B15E6D6524C301C800C20CFD /* Moshi_case.app */,
+				B15E6D6524C301C800C20CFD /* Moshify.app */,
 				B15E6D9D24C3BEB400C20CFD /* Spotify.framework */,
 			);
 			name = Products;
@@ -295,7 +295,7 @@
 				B15E6DBB24C4383000C20CFD /* Kingfisher */,
 			);
 			productName = Moshi_case;
-			productReference = B15E6D6524C301C800C20CFD /* Moshi_case.app */;
+			productReference = B15E6D6524C301C800C20CFD /* Moshify.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B15E6D9C24C3BEB400C20CFD /* Spotify */ = {
@@ -576,7 +576,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Moshi.Moshi-case";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Moshify;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -597,7 +597,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Moshi.Moshi-case";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Moshify;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
