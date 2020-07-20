@@ -21,7 +21,7 @@ class ReleasesTableViewController: UITableViewController {
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
-        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
 
         viewModel.delegate = self
         viewModel.fetchNewReleases()

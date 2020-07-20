@@ -57,6 +57,8 @@ class AlbumDetailViewController: UIViewController {
                     .transition(.fade(1)),
                     .cacheOriginalImage
                 ])
+
+            coverArtImageView.layer.cornerRadius = 5
         }
 
         if let recordLabelName = viewModel.recordLabelName {
@@ -64,7 +66,7 @@ class AlbumDetailViewController: UIViewController {
         }
 
         if let trackCount = viewModel.tracks?.count {
-            self.trackCountLabel.text = "\(trackCount) tracks"
+            self.trackCountLabel.text = trackCount > 1 ? "\(trackCount) tracks" : "\(trackCount) track"
         }
     }
 

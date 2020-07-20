@@ -14,6 +14,7 @@ protocol ReleasesTableViewCellDelegate {
 }
 
 class ReleasesTableViewCell: UITableViewCell {
+    @IBOutlet private var wrapperView: UIView!
     @IBOutlet private var coverArtImageView: UIImageView!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var releaseDateLabel: UILabel!
@@ -27,15 +28,21 @@ class ReleasesTableViewCell: UITableViewCell {
 
         selectionStyle = .none
 
-        shareButton.backgroundColor = .gray
+        wrapperView.layer.shadowColor = UIColor.black.cgColor
+        wrapperView.layer.shadowOpacity = 0.2
+        wrapperView.layer.shadowOffset = .zero
+        wrapperView.layer.shadowRadius = 5
+        wrapperView.layer.cornerRadius = 5
+
+        coverArtImageView.layer.cornerRadius = 5
+
         shareButton.layer.cornerRadius = 5
-        shareButton.imageView?.tintColor = .white
         shareButton.imageEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
     }
 
     func configure(viewModel: ReleasesTableViewCellViewModel) {
         titleLabel.text = viewModel.albumTitle
-        releaseDateLabel.text = viewModel.albumReleaseDate
+        releaseDateLabel.text = "Release date: \(viewModel.albumReleaseDate)"
         shareURL = viewModel.sharingURL
         
         if let url = viewModel.albumCoverArtURL {
