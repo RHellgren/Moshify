@@ -23,6 +23,10 @@ class ReleasesTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 600
         tableView.separatorStyle = .none
 
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+        self.parent?.view.addSubview(statusBarView)
+        statusBarView.backgroundColor = UIColor(named: "PrimaryBackground")
+
         viewModel.delegate = self
         viewModel.fetchNewReleases()
     }
