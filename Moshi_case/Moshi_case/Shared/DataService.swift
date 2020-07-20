@@ -41,10 +41,12 @@ class DataService {
 
             let mainArtists = detailedAlbum.artists.map { Artist(name: $0.name) }
 
-            let tracks = detailedAlbum.tracks.items.map {
-                Track(artists: $0.artists.map { Artist(name: $0.name) },
+            let tracks: [Track] = detailedAlbum.tracks.items.map {
+                let duration = NSDate(timeIntervalSince1970: Double($0.duration) / 1000)
+
+                return Track(artists: $0.artists.map { Artist(name: $0.name) },
                       name: $0.name,
-                      duration: $0.duration,
+                      duration: duration as Date,
                       explicit: $0.explicit)
             }
 

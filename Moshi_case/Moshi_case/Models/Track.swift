@@ -11,6 +11,6 @@ import Foundation
 struct Track {
     let artists: [Artist]
     let name: String
-    let duration: Double
+    let duration: Date
     let explicit: Bool
 }

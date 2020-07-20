@@ -8,14 +8,21 @@
 
 import Foundation
 
+protocol AlbumDetailViewModelDelegate {
+    func onFetchCompleted()
+}
+
 class AlbumDetailViewModel {
     let id: String
     let albumCoverArtURL: URL?
     let artistName: String
     let albumTitle: String
     let albumReleaseDate: String
-    var recordLabelName: String = ""
-    var tracks: [Track] = []
+    var recordLabelName: String?
+    var tracks: [Track]?
+
+    var delegate: AlbumDetailViewModelDelegate?
+    private var isFetchInProgress = false
 
     init(album: Album) {
         id = album.id
@@ -25,14 +32,25 @@ class AlbumDetailViewModel {
         albumReleaseDate = album.releaseDate
     }
 
-    func load(completion: @escaping () -> Void) {
+    func fetchAlbumDetails() {
+        guard !isFetchInProgress else {
+          return
+        }
+
+        isFetchInProgress = true
+
         DataService().getDetailedAlbum(id: id) { detailedAlbum in
             if let detailedAlbum = detailedAlbum {
                 self.recordLabelName = detailedAlbum.recordLabelName
                 self.tracks = detailedAlbum.tracks
             }
-            completion()
+
+            self.delegate?.onFetchCompleted()
         }
+    }
+
+    func albumDetailTracksViewModel() -> AlbumDetailTracksViewModel {
+        return AlbumDetailTracksViewModel(tracks: tracks ?? [])
     }
 
 }

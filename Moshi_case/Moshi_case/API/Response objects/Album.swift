@@ -11,7 +11,7 @@ import Foundation
 public struct Album: Codable {
     public let albumType: String
     public let artists: [Artist]
-    public let availableMarkets: [String]
+    public let availableMarkets: [String]?
     public let copyrights: [Copyright]
     public let externalIds: ExternalIds
     public let externalURLs: ExternalURL
@@ -62,7 +62,7 @@ public struct Album: Codable {
 
         public struct TrackItem: Codable {
             public let artists: [Artist]
-            public let availableMarkets: [String]
+            public let availableMarkets: [String]?
             public let discNumber: Int
             public let duration: Double
             public let explicit: Bool

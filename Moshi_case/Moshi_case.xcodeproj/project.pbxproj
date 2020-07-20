@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B156A12C24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12B24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift */; };
+		B156A12E24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */; };
+		B156A13124C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */; };
+		B156A13224C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */; };
 		B15E6D6924C301C800C20CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D6824C301C800C20CFD /* AppDelegate.swift */; };
 		B15E6D6D24C301C800C20CFD /* ReleasesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15E6D6C24C301C800C20CFD /* ReleasesTableViewController.swift */; };
 		B15E6D7024C301C800C20CFD /* ReleasesTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15E6D6E24C301C800C20CFD /* ReleasesTableView.storyboard */; };
@@ -64,6 +68,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B156A12B24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksTableViewController.swift; sourceTree = "<group>"; };
+		B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksViewModel.swift; sourceTree = "<group>"; };
+		B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTracksTableViewCell.swift; sourceTree = "<group>"; };
+		B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumDetailTracksTableViewCell.xib; sourceTree = "<group>"; };
 		B15E6D6524C301C800C20CFD /* Moshi_case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moshi_case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15E6D6824C301C800C20CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B15E6D6C24C301C800C20CFD /* ReleasesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesTableViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B156A13324C5F0510082E78F /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				B156A12B24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift */,
+				B156A12D24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift */,
+				B156A12F24C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift */,
+				B156A13024C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib */,
+			);
+			path = Tracks;
+			sourceTree = "<group>";
+		};
 		B15E6D5C24C301C800C20CFD = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +257,7 @@
 				B15E6DC124C4449200C20CFD /* AlbumDetailViewController.storyboard */,
 				B15E6DBF24C4448700C20CFD /* AlbumDetailViewController.swift */,
 				B15E6DC324C462DD00C20CFD /* AlbumDetailViewModel.swift */,
+				B156A13324C5F0510082E78F /* Tracks */,
 			);
 			path = "Album details";
 			sourceTree = "<group>";
@@ -345,6 +365,7 @@
 				B15E6D7224C301C900C20CFD /* Assets.xcassets in Resources */,
 				B15E6D9124C3488900C20CFD /* ReleasesTableViewCell.xib in Resources */,
 				B15E6DC224C4449200C20CFD /* AlbumDetailViewController.storyboard in Resources */,
+				B156A13224C5F04B0082E78F /* AlbumDetailTracksTableViewCell.xib in Resources */,
 				B15E6D7024C301C800C20CFD /* ReleasesTableView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,8 +388,10 @@
 				B15E6DC424C462DD00C20CFD /* AlbumDetailViewModel.swift in Sources */,
 				B15E6D6D24C301C800C20CFD /* ReleasesTableViewController.swift in Sources */,
 				B15E6DC024C4448700C20CFD /* AlbumDetailViewController.swift in Sources */,
+				B156A13124C5F04B0082E78F /* AlbumDetailTracksTableViewCell.swift in Sources */,
 				B15E6D9024C3488900C20CFD /* ReleasesTableViewCell.swift in Sources */,
 				B15E6DB524C3BF4E00C20CFD /* NewReleases.swift in Sources */,
+				B156A12E24C5EF1B0082E78F /* AlbumDetailTracksViewModel.swift in Sources */,
 				B15E6D9524C3497F00C20CFD /* UITableView+Extensions.swift in Sources */,
 				B15E6D8D24C345B500C20CFD /* ReleasesTableViewControllerViewModel.swift in Sources */,
 				B15E6D6924C301C800C20CFD /* AppDelegate.swift in Sources */,
@@ -376,6 +399,7 @@
 				B15E6DCA24C4730300C20CFD /* UIViewController+Extensions.swift in Sources */,
 				B15E6DB324C3BF0C00C20CFD /* Album.swift in Sources */,
 				B15E6D9724C34E1100C20CFD /* ReleasesTableViewCellViewModel.swift in Sources */,
+				B156A12C24C5EE300082E78F /* AlbumDetailTracksTableViewController.swift in Sources */,
 				B15E6DC624C468B500C20CFD /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

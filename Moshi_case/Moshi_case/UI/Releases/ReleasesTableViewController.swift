@@ -21,6 +21,7 @@ class ReleasesTableViewController: UITableViewController {
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
+        tableView.tableFooterView = UIView()
 
         viewModel.delegate = self
         viewModel.fetchNewReleases()
@@ -37,6 +38,7 @@ class ReleasesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell: ReleasesTableViewCell = tableView.dequeueReusableCell(for: indexPath)
 
         if let viewModel = viewModel.cellViewModel(for: indexPath.row) {

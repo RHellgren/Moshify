@@ -23,7 +23,7 @@ public struct NewReleases: Codable {
         public struct AlbumItem: Codable {
             public let albumType: String
             public let artists: [Artist]
-            public let availableMarkets: [String]
+            public let availableMarkets: [String]?
             public let externalURLs: ExternalURL
             public let href: URL
             public let id: String
