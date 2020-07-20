@@ -25,6 +25,8 @@ class ReleasesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        selectionStyle = .none
+
         shareButton.backgroundColor = .gray
         shareButton.layer.cornerRadius = 5
         shareButton.imageView?.tintColor = .white
